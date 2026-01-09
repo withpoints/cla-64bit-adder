@@ -1,0 +1,636 @@
+
+==========================================================================
+finish report_tns
+--------------------------------------------------------------------------
+tns max 0.00
+
+==========================================================================
+finish report_wns
+--------------------------------------------------------------------------
+wns max 0.00
+
+==========================================================================
+finish report_worst_slack
+--------------------------------------------------------------------------
+worst slack max 6.85
+
+==========================================================================
+finish report_clock_min_period
+--------------------------------------------------------------------------
+clk period_min = 33.15 fmax = 30.17
+
+==========================================================================
+finish report_clock_skew
+--------------------------------------------------------------------------
+Clock clk
+No launch/capture paths found.
+
+
+==========================================================================
+finish report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: Cin (input port clocked by clk)
+Endpoint: Sum[0] (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          2.00    2.00 ^ input external delay
+     1    0.00    0.00    0.00    2.00 ^ Cin (in)
+                                         Cin (net)
+                  0.00    0.00    2.00 ^ input129/A (sky130_fd_sc_hd__clkdlybuf4s50_1)
+     2    0.01    0.12    0.51    2.51 ^ input129/X (sky130_fd_sc_hd__clkdlybuf4s50_1)
+                                         net129 (net)
+                  0.12    0.00    2.51 ^ u0.u0.u0.u0._20_/A (sky130_fd_sc_hd__xnor2_1)
+     1    0.00    0.04    0.08    2.60 v u0.u0.u0.u0._20_/Y (sky130_fd_sc_hd__xnor2_1)
+                                         net131 (net)
+                  0.04    0.00    2.60 v output131/A (sky130_fd_sc_hd__clkdlybuf4s50_1)
+     1    0.00    0.04    0.39    2.99 v output131/X (sky130_fd_sc_hd__clkdlybuf4s50_1)
+                                         Sum[0] (net)
+                  0.04    0.00    2.99 v Sum[0] (out)
+                                  2.99   data arrival time
+
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                         -1.00   -1.00   output external delay
+                                 -1.00   data required time
+-----------------------------------------------------------------------------
+                                 -1.00   data required time
+                                 -2.99   data arrival time
+-----------------------------------------------------------------------------
+                                  3.99   slack (MET)
+
+
+
+==========================================================================
+finish report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: A[0] (input port clocked by clk)
+Endpoint: Cout (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          3.00    3.00 v input external delay
+     1    0.00    0.00    0.00    3.00 v A[0] (in)
+                                         A[0] (net)
+                  0.00    0.00    3.00 v input1/A (sky130_fd_sc_hd__clkdlybuf4s50_1)
+     2    0.01    0.13    0.48    3.48 v input1/X (sky130_fd_sc_hd__clkdlybuf4s50_1)
+                                         net1 (net)
+                  0.13    0.00    3.48 v u0.u0.u0.u0._14_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40    3.88 v u0.u0.u0.u0._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u0.u0._02_ (net)
+                  0.10    0.00    3.88 v u0.u0.u0.u0._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40    4.28 v u0.u0.u0.u0._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u0.u0._04_ (net)
+                  0.09    0.00    4.28 v u0.u0.u0.u0._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.41    4.68 v u0.u0.u0.u0._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u0.u0._06_ (net)
+                  0.10    0.00    4.68 v u0.u0.u0.u0._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40    5.08 v u0.u0.u0.u0._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u0.C4 (net)
+                  0.09    0.00    5.08 v u0.u0.u0.u1._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40    5.48 v u0.u0.u0.u1._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u0.u1._02_ (net)
+                  0.09    0.00    5.48 v u0.u0.u0.u1._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40    5.88 v u0.u0.u0.u1._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u0.u1._04_ (net)
+                  0.09    0.00    5.88 v u0.u0.u0.u1._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40    6.28 v u0.u0.u0.u1._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u0.u1._06_ (net)
+                  0.09    0.00    6.28 v u0.u0.u0.u1._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40    6.68 v u0.u0.u0.u1._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.C8 (net)
+                  0.09    0.00    6.68 v u0.u0.u1.u0._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40    7.09 v u0.u0.u1.u0._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u1.u0._02_ (net)
+                  0.10    0.00    7.09 v u0.u0.u1.u0._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.41    7.50 v u0.u0.u1.u0._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u1.u0._04_ (net)
+                  0.10    0.00    7.50 v u0.u0.u1.u0._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.41    7.91 v u0.u0.u1.u0._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u1.u0._06_ (net)
+                  0.10    0.00    7.91 v u0.u0.u1.u0._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40    8.31 v u0.u0.u1.u0._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u1.C4 (net)
+                  0.09    0.00    8.31 v u0.u0.u1.u1._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40    8.70 v u0.u0.u1.u1._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u1.u1._02_ (net)
+                  0.09    0.00    8.70 v u0.u0.u1.u1._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40    9.11 v u0.u0.u1.u1._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u1.u1._04_ (net)
+                  0.10    0.00    9.11 v u0.u0.u1.u1._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.11    0.42    9.53 v u0.u0.u1.u1._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u1.u1._06_ (net)
+                  0.11    0.00    9.53 v u0.u0.u1.u1._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40    9.93 v u0.u0.u1.u1._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.C16 (net)
+                  0.09    0.00    9.93 v u0.u1.u0.u0._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.02    0.13    0.44   10.37 v u0.u1.u0.u0._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u0.u0._02_ (net)
+                  0.13    0.00   10.37 v u0.u1.u0.u0._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.42   10.79 v u0.u1.u0.u0._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u0.u0._04_ (net)
+                  0.10    0.00   10.79 v u0.u1.u0.u0._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   11.19 v u0.u1.u0.u0._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u0.u0._06_ (net)
+                  0.09    0.00   11.19 v u0.u1.u0.u0._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.06    0.30    0.59   11.78 v u0.u1.u0.u0._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u0.C4 (net)
+                  0.31    0.01   11.79 v u0.u1.u0.u1._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.48   12.28 v u0.u1.u0.u1._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u0.u1._02_ (net)
+                  0.10    0.00   12.28 v u0.u1.u0.u1._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   12.68 v u0.u1.u0.u1._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u0.u1._04_ (net)
+                  0.09    0.00   12.68 v u0.u1.u0.u1._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   13.08 v u0.u1.u0.u1._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u0.u1._06_ (net)
+                  0.09    0.00   13.08 v u0.u1.u0.u1._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   13.48 v u0.u1.u0.u1._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.C8 (net)
+                  0.09    0.00   13.48 v u0.u1.u1.u0._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.41   13.88 v u0.u1.u1.u0._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u1.u0._02_ (net)
+                  0.10    0.00   13.88 v u0.u1.u1.u0._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.41   14.29 v u0.u1.u1.u0._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u1.u0._04_ (net)
+                  0.10    0.00   14.29 v u0.u1.u1.u0._21_/C (sky130_fd_sc_hd__maj3_1)
+     1    0.00    0.07    0.37   14.66 v u0.u1.u1.u0._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u1.u0._06_ (net)
+                  0.07    0.00   14.66 v place196/A (sky130_fd_sc_hd__buf_4)
+     2    0.06    0.08    0.20   14.86 v place196/X (sky130_fd_sc_hd__buf_4)
+                                         net196 (net)
+                  0.09    0.02   14.88 v u0.u1.u1.u0._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.39   15.27 v u0.u1.u1.u0._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u1.C4 (net)
+                  0.09    0.00   15.27 v u0.u1.u1.u1._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   15.67 v u0.u1.u1.u1._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u1.u1._02_ (net)
+                  0.10    0.00   15.67 v u0.u1.u1.u1._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.06    0.31    0.60   16.27 v u0.u1.u1.u1._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u1.u1._04_ (net)
+                  0.31    0.02   16.29 v u0.u1.u1.u1._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.48   16.77 v u0.u1.u1.u1._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u1.u1._06_ (net)
+                  0.09    0.00   16.78 v u0.u1.u1.u1._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   17.17 v u0.u1.u1.u1._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         C32 (net)
+                  0.09    0.00   17.17 v u1.u0.u0.u0._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   17.57 v u1.u0.u0.u0._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u0.u0._02_ (net)
+                  0.10    0.00   17.57 v u1.u0.u0.u0._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   17.97 v u1.u0.u0.u0._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u0.u0._04_ (net)
+                  0.09    0.00   17.97 v u1.u0.u0.u0._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   18.37 v u1.u0.u0.u0._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u0.u0._06_ (net)
+                  0.10    0.00   18.37 v u1.u0.u0.u0._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   18.77 v u1.u0.u0.u0._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u0.C4 (net)
+                  0.09    0.00   18.78 v u1.u0.u0.u1._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   19.18 v u1.u0.u0.u1._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u0.u1._02_ (net)
+                  0.10    0.00   19.18 v u1.u0.u0.u1._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   19.58 v u1.u0.u0.u1._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u0.u1._04_ (net)
+                  0.09    0.00   19.58 v u1.u0.u0.u1._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   19.97 v u1.u0.u0.u1._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u0.u1._06_ (net)
+                  0.09    0.00   19.97 v u1.u0.u0.u1._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   20.38 v u1.u0.u0.u1._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.C8 (net)
+                  0.10    0.00   20.38 v u1.u0.u1.u0._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   20.77 v u1.u0.u1.u0._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u1.u0._02_ (net)
+                  0.09    0.00   20.77 v u1.u0.u1.u0._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   21.17 v u1.u0.u1.u0._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u1.u0._04_ (net)
+                  0.09    0.00   21.17 v u1.u0.u1.u0._21_/C (sky130_fd_sc_hd__maj3_1)
+     1    0.00    0.06    0.36   21.53 v u1.u0.u1.u0._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u1.u0._06_ (net)
+                  0.06    0.00   21.53 v place195/A (sky130_fd_sc_hd__buf_4)
+     2    0.06    0.08    0.19   21.73 v place195/X (sky130_fd_sc_hd__buf_4)
+                                         net195 (net)
+                  0.09    0.02   21.75 v u1.u0.u1.u0._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   22.15 v u1.u0.u1.u0._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u1.C4 (net)
+                  0.10    0.00   22.15 v u1.u0.u1.u1._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   22.55 v u1.u0.u1.u1._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u1.u1._02_ (net)
+                  0.10    0.00   22.55 v u1.u0.u1.u1._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   22.95 v u1.u0.u1.u1._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u1.u1._04_ (net)
+                  0.10    0.00   22.96 v u1.u0.u1.u1._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.05    0.26    0.56   23.51 v u1.u0.u1.u1._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u1.u1._06_ (net)
+                  0.26    0.01   23.52 v u1.u0.u1.u1._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.46   23.99 v u1.u0.u1.u1._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.C16 (net)
+                  0.09    0.00   23.99 v u1.u1.u0.u0._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   24.39 v u1.u1.u0.u0._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u0.u0._02_ (net)
+                  0.10    0.00   24.39 v u1.u1.u0.u0._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   24.79 v u1.u1.u0.u0._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u0.u0._04_ (net)
+                  0.10    0.00   24.79 v u1.u1.u0.u0._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.41   25.20 v u1.u1.u0.u0._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u0.u0._06_ (net)
+                  0.10    0.00   25.20 v u1.u1.u0.u0._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.41   25.61 v u1.u1.u0.u0._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u0.C4 (net)
+                  0.10    0.00   25.61 v u1.u1.u0.u1._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   26.01 v u1.u1.u0.u1._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u0.u1._02_ (net)
+                  0.10    0.00   26.01 v u1.u1.u0.u1._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   26.41 v u1.u1.u0.u1._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u0.u1._04_ (net)
+                  0.09    0.00   26.41 v u1.u1.u0.u1._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   26.81 v u1.u1.u0.u1._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u0.u1._06_ (net)
+                  0.09    0.00   26.81 v u1.u1.u0.u1._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   27.21 v u1.u1.u0.u1._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.C8 (net)
+                  0.10    0.00   27.21 v u1.u1.u1.u0._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.12    0.43   27.64 v u1.u1.u1.u0._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u1.u0._02_ (net)
+                  0.12    0.00   27.64 v u1.u1.u1.u0._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.41   28.05 v u1.u1.u1.u0._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u1.u0._04_ (net)
+                  0.10    0.00   28.05 v u1.u1.u1.u0._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   28.46 v u1.u1.u1.u0._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u1.u0._06_ (net)
+                  0.10    0.00   28.46 v u1.u1.u1.u0._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.41   28.86 v u1.u1.u1.u0._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u1.C4 (net)
+                  0.10    0.00   28.86 v u1.u1.u1.u1._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   29.27 v u1.u1.u1.u1._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u1.u1._02_ (net)
+                  0.10    0.00   29.27 v u1.u1.u1.u1._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.41   29.67 v u1.u1.u1.u1._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u1.u1._04_ (net)
+                  0.10    0.00   29.67 v u1.u1.u1.u1._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   30.08 v u1.u1.u1.u1._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u1.u1._06_ (net)
+                  0.09    0.00   30.08 v u1.u1.u1.u1._23_/C (sky130_fd_sc_hd__maj3_1)
+     1    0.00    0.07    0.37   30.44 v u1.u1.u1.u1._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         net130 (net)
+                  0.07    0.00   30.44 v output130/A (sky130_fd_sc_hd__clkdlybuf4s50_1)
+     1    0.05    0.38    0.71   31.15 v output130/X (sky130_fd_sc_hd__clkdlybuf4s50_1)
+                                         Cout (net)
+                  0.38    0.00   31.15 v Cout (out)
+                                 31.15   data arrival time
+
+                  0.00   40.00   40.00   clock clk (rise edge)
+                          0.00   40.00   clock network delay (ideal)
+                          0.00   40.00   clock reconvergence pessimism
+                         -2.00   38.00   output external delay
+                                 38.00   data required time
+-----------------------------------------------------------------------------
+                                 38.00   data required time
+                                -31.15   data arrival time
+-----------------------------------------------------------------------------
+                                  6.85   slack (MET)
+
+
+
+==========================================================================
+finish report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: A[0] (input port clocked by clk)
+Endpoint: Cout (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          3.00    3.00 v input external delay
+     1    0.00    0.00    0.00    3.00 v A[0] (in)
+                                         A[0] (net)
+                  0.00    0.00    3.00 v input1/A (sky130_fd_sc_hd__clkdlybuf4s50_1)
+     2    0.01    0.13    0.48    3.48 v input1/X (sky130_fd_sc_hd__clkdlybuf4s50_1)
+                                         net1 (net)
+                  0.13    0.00    3.48 v u0.u0.u0.u0._14_/B (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40    3.88 v u0.u0.u0.u0._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u0.u0._02_ (net)
+                  0.10    0.00    3.88 v u0.u0.u0.u0._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40    4.28 v u0.u0.u0.u0._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u0.u0._04_ (net)
+                  0.09    0.00    4.28 v u0.u0.u0.u0._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.41    4.68 v u0.u0.u0.u0._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u0.u0._06_ (net)
+                  0.10    0.00    4.68 v u0.u0.u0.u0._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40    5.08 v u0.u0.u0.u0._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u0.C4 (net)
+                  0.09    0.00    5.08 v u0.u0.u0.u1._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40    5.48 v u0.u0.u0.u1._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u0.u1._02_ (net)
+                  0.09    0.00    5.48 v u0.u0.u0.u1._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40    5.88 v u0.u0.u0.u1._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u0.u1._04_ (net)
+                  0.09    0.00    5.88 v u0.u0.u0.u1._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40    6.28 v u0.u0.u0.u1._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u0.u1._06_ (net)
+                  0.09    0.00    6.28 v u0.u0.u0.u1._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40    6.68 v u0.u0.u0.u1._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.C8 (net)
+                  0.09    0.00    6.68 v u0.u0.u1.u0._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40    7.09 v u0.u0.u1.u0._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u1.u0._02_ (net)
+                  0.10    0.00    7.09 v u0.u0.u1.u0._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.41    7.50 v u0.u0.u1.u0._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u1.u0._04_ (net)
+                  0.10    0.00    7.50 v u0.u0.u1.u0._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.41    7.91 v u0.u0.u1.u0._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u1.u0._06_ (net)
+                  0.10    0.00    7.91 v u0.u0.u1.u0._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40    8.31 v u0.u0.u1.u0._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u1.C4 (net)
+                  0.09    0.00    8.31 v u0.u0.u1.u1._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40    8.70 v u0.u0.u1.u1._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u1.u1._02_ (net)
+                  0.09    0.00    8.70 v u0.u0.u1.u1._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40    9.11 v u0.u0.u1.u1._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u1.u1._04_ (net)
+                  0.10    0.00    9.11 v u0.u0.u1.u1._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.11    0.42    9.53 v u0.u0.u1.u1._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u0.u1.u1._06_ (net)
+                  0.11    0.00    9.53 v u0.u0.u1.u1._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40    9.93 v u0.u0.u1.u1._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.C16 (net)
+                  0.09    0.00    9.93 v u0.u1.u0.u0._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.02    0.13    0.44   10.37 v u0.u1.u0.u0._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u0.u0._02_ (net)
+                  0.13    0.00   10.37 v u0.u1.u0.u0._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.42   10.79 v u0.u1.u0.u0._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u0.u0._04_ (net)
+                  0.10    0.00   10.79 v u0.u1.u0.u0._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   11.19 v u0.u1.u0.u0._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u0.u0._06_ (net)
+                  0.09    0.00   11.19 v u0.u1.u0.u0._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.06    0.30    0.59   11.78 v u0.u1.u0.u0._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u0.C4 (net)
+                  0.31    0.01   11.79 v u0.u1.u0.u1._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.48   12.28 v u0.u1.u0.u1._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u0.u1._02_ (net)
+                  0.10    0.00   12.28 v u0.u1.u0.u1._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   12.68 v u0.u1.u0.u1._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u0.u1._04_ (net)
+                  0.09    0.00   12.68 v u0.u1.u0.u1._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   13.08 v u0.u1.u0.u1._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u0.u1._06_ (net)
+                  0.09    0.00   13.08 v u0.u1.u0.u1._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   13.48 v u0.u1.u0.u1._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.C8 (net)
+                  0.09    0.00   13.48 v u0.u1.u1.u0._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.41   13.88 v u0.u1.u1.u0._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u1.u0._02_ (net)
+                  0.10    0.00   13.88 v u0.u1.u1.u0._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.41   14.29 v u0.u1.u1.u0._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u1.u0._04_ (net)
+                  0.10    0.00   14.29 v u0.u1.u1.u0._21_/C (sky130_fd_sc_hd__maj3_1)
+     1    0.00    0.07    0.37   14.66 v u0.u1.u1.u0._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u1.u0._06_ (net)
+                  0.07    0.00   14.66 v place196/A (sky130_fd_sc_hd__buf_4)
+     2    0.06    0.08    0.20   14.86 v place196/X (sky130_fd_sc_hd__buf_4)
+                                         net196 (net)
+                  0.09    0.02   14.88 v u0.u1.u1.u0._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.39   15.27 v u0.u1.u1.u0._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u1.C4 (net)
+                  0.09    0.00   15.27 v u0.u1.u1.u1._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   15.67 v u0.u1.u1.u1._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u1.u1._02_ (net)
+                  0.10    0.00   15.67 v u0.u1.u1.u1._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.06    0.31    0.60   16.27 v u0.u1.u1.u1._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u1.u1._04_ (net)
+                  0.31    0.02   16.29 v u0.u1.u1.u1._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.48   16.77 v u0.u1.u1.u1._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u0.u1.u1.u1._06_ (net)
+                  0.09    0.00   16.78 v u0.u1.u1.u1._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   17.17 v u0.u1.u1.u1._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         C32 (net)
+                  0.09    0.00   17.17 v u1.u0.u0.u0._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   17.57 v u1.u0.u0.u0._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u0.u0._02_ (net)
+                  0.10    0.00   17.57 v u1.u0.u0.u0._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   17.97 v u1.u0.u0.u0._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u0.u0._04_ (net)
+                  0.09    0.00   17.97 v u1.u0.u0.u0._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   18.37 v u1.u0.u0.u0._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u0.u0._06_ (net)
+                  0.10    0.00   18.37 v u1.u0.u0.u0._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   18.77 v u1.u0.u0.u0._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u0.C4 (net)
+                  0.09    0.00   18.78 v u1.u0.u0.u1._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   19.18 v u1.u0.u0.u1._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u0.u1._02_ (net)
+                  0.10    0.00   19.18 v u1.u0.u0.u1._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   19.58 v u1.u0.u0.u1._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u0.u1._04_ (net)
+                  0.09    0.00   19.58 v u1.u0.u0.u1._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   19.97 v u1.u0.u0.u1._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u0.u1._06_ (net)
+                  0.09    0.00   19.97 v u1.u0.u0.u1._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   20.38 v u1.u0.u0.u1._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.C8 (net)
+                  0.10    0.00   20.38 v u1.u0.u1.u0._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   20.77 v u1.u0.u1.u0._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u1.u0._02_ (net)
+                  0.09    0.00   20.77 v u1.u0.u1.u0._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   21.17 v u1.u0.u1.u0._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u1.u0._04_ (net)
+                  0.09    0.00   21.17 v u1.u0.u1.u0._21_/C (sky130_fd_sc_hd__maj3_1)
+     1    0.00    0.06    0.36   21.53 v u1.u0.u1.u0._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u1.u0._06_ (net)
+                  0.06    0.00   21.53 v place195/A (sky130_fd_sc_hd__buf_4)
+     2    0.06    0.08    0.19   21.73 v place195/X (sky130_fd_sc_hd__buf_4)
+                                         net195 (net)
+                  0.09    0.02   21.75 v u1.u0.u1.u0._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   22.15 v u1.u0.u1.u0._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u1.C4 (net)
+                  0.10    0.00   22.15 v u1.u0.u1.u1._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   22.55 v u1.u0.u1.u1._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u1.u1._02_ (net)
+                  0.10    0.00   22.55 v u1.u0.u1.u1._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   22.95 v u1.u0.u1.u1._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u1.u1._04_ (net)
+                  0.10    0.00   22.96 v u1.u0.u1.u1._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.05    0.26    0.56   23.51 v u1.u0.u1.u1._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u0.u1.u1._06_ (net)
+                  0.26    0.01   23.52 v u1.u0.u1.u1._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.46   23.99 v u1.u0.u1.u1._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.C16 (net)
+                  0.09    0.00   23.99 v u1.u1.u0.u0._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   24.39 v u1.u1.u0.u0._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u0.u0._02_ (net)
+                  0.10    0.00   24.39 v u1.u1.u0.u0._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   24.79 v u1.u1.u0.u0._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u0.u0._04_ (net)
+                  0.10    0.00   24.79 v u1.u1.u0.u0._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.41   25.20 v u1.u1.u0.u0._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u0.u0._06_ (net)
+                  0.10    0.00   25.20 v u1.u1.u0.u0._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.41   25.61 v u1.u1.u0.u0._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u0.C4 (net)
+                  0.10    0.00   25.61 v u1.u1.u0.u1._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   26.01 v u1.u1.u0.u1._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u0.u1._02_ (net)
+                  0.10    0.00   26.01 v u1.u1.u0.u1._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   26.41 v u1.u1.u0.u1._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u0.u1._04_ (net)
+                  0.09    0.00   26.41 v u1.u1.u0.u1._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   26.81 v u1.u1.u0.u1._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u0.u1._06_ (net)
+                  0.09    0.00   26.81 v u1.u1.u0.u1._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   27.21 v u1.u1.u0.u1._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.C8 (net)
+                  0.10    0.00   27.21 v u1.u1.u1.u0._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.12    0.43   27.64 v u1.u1.u1.u0._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u1.u0._02_ (net)
+                  0.12    0.00   27.64 v u1.u1.u1.u0._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.41   28.05 v u1.u1.u1.u0._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u1.u0._04_ (net)
+                  0.10    0.00   28.05 v u1.u1.u1.u0._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   28.46 v u1.u1.u1.u0._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u1.u0._06_ (net)
+                  0.10    0.00   28.46 v u1.u1.u1.u0._23_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.41   28.86 v u1.u1.u1.u0._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u1.C4 (net)
+                  0.10    0.00   28.86 v u1.u1.u1.u1._14_/A (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.40   29.27 v u1.u1.u1.u1._14_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u1.u1._02_ (net)
+                  0.10    0.00   29.27 v u1.u1.u1.u1._16_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.10    0.41   29.67 v u1.u1.u1.u1._16_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u1.u1._04_ (net)
+                  0.10    0.00   29.67 v u1.u1.u1.u1._21_/C (sky130_fd_sc_hd__maj3_1)
+     2    0.01    0.09    0.40   30.08 v u1.u1.u1.u1._21_/X (sky130_fd_sc_hd__maj3_1)
+                                         u1.u1.u1.u1._06_ (net)
+                  0.09    0.00   30.08 v u1.u1.u1.u1._23_/C (sky130_fd_sc_hd__maj3_1)
+     1    0.00    0.07    0.37   30.44 v u1.u1.u1.u1._23_/X (sky130_fd_sc_hd__maj3_1)
+                                         net130 (net)
+                  0.07    0.00   30.44 v output130/A (sky130_fd_sc_hd__clkdlybuf4s50_1)
+     1    0.05    0.38    0.71   31.15 v output130/X (sky130_fd_sc_hd__clkdlybuf4s50_1)
+                                         Cout (net)
+                  0.38    0.00   31.15 v Cout (out)
+                                 31.15   data arrival time
+
+                  0.00   40.00   40.00   clock clk (rise edge)
+                          0.00   40.00   clock network delay (ideal)
+                          0.00   40.00   clock reconvergence pessimism
+                         -2.00   38.00   output external delay
+                                 38.00   data required time
+-----------------------------------------------------------------------------
+                                 38.00   data required time
+                                -31.15   data arrival time
+-----------------------------------------------------------------------------
+                                  6.85   slack (MET)
+
+
+
+==========================================================================
+finish report_check_types -max_slew -max_cap -max_fanout -violators
+--------------------------------------------------------------------------
+
+==========================================================================
+finish max_slew_check_slack
+--------------------------------------------------------------------------
+0.9167934060096741
+
+==========================================================================
+finish max_slew_check_limit
+--------------------------------------------------------------------------
+1.5
+
+==========================================================================
+finish max_slew_check_slack_limit
+--------------------------------------------------------------------------
+0.6112
+
+==========================================================================
+finish max_fanout_check_slack
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+finish max_fanout_check_limit
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+finish max_capacitance_check_slack
+--------------------------------------------------------------------------
+0.06095264106988907
+
+==========================================================================
+finish max_capacitance_check_limit
+--------------------------------------------------------------------------
+0.0695900022983551
+
+==========================================================================
+finish max_capacitance_check_slack_limit
+--------------------------------------------------------------------------
+0.8759
+
+==========================================================================
+finish max_slew_violation_count
+--------------------------------------------------------------------------
+max slew violation count 0
+
+==========================================================================
+finish max_fanout_violation_count
+--------------------------------------------------------------------------
+max fanout violation count 0
+
+==========================================================================
+finish max_cap_violation_count
+--------------------------------------------------------------------------
+max cap violation count 0
+
+==========================================================================
+finish setup_violation_count
+--------------------------------------------------------------------------
+setup violation count 0
+
+==========================================================================
+finish hold_violation_count
+--------------------------------------------------------------------------
+hold violation count 0
+
+==========================================================================
+finish critical path delay
+--------------------------------------------------------------------------
+31.1498
+
+==========================================================================
+finish critical path slack
+--------------------------------------------------------------------------
+6.8502
+
+==========================================================================
+finish slack div critical path delay
+--------------------------------------------------------------------------
+21.991152
+
+==========================================================================
+finish report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Combinational          4.64e-05   2.26e-05   1.31e-09   6.90e-05 100.0%
+Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  4.64e-05   2.26e-05   1.31e-09   6.90e-05 100.0%
+                          67.3%      32.7%       0.0%

@@ -1,0 +1,13 @@
+OpenROAD v2.0-27463-gc3bd3a2184 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+read_liberty /home/rohit/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db ./results/sky130hd/adder64/base/2_3_floorplan_tapcell.odb
+source /home/rohit/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+[INFO PDN-0001] Inserting grid: grid
+write_db ./results/sky130hd/adder64/base/2_4_floorplan_pdn.odb
+Elapsed time: 0:00.47[h:]min:sec. CPU time: user 0.43 sys 0.03 (97%). Peak memory: 126728KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_4_floorplan_pdn                  0            123 9652a4a0d35689d948db

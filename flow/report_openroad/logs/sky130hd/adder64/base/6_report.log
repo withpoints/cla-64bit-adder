@@ -1,0 +1,62 @@
+OpenROAD v2.0-27463-gc3bd3a2184 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+read_liberty /home/rohit/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db ./results/sky130hd/adder64/base/6_1_fill.odb
+source /home/rohit/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+[WARNING STA-0450] virtual clock clk can not be propagated.
+write_db ./results/sky130hd/adder64/base/6_final.odb
+Deleted 0 routing obstructions
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /home/rohit/OpenROAD-flow-scripts/flow/platforms/sky130hd/rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation adder64 (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 938 rc segments
+[INFO RCX-0439] Coupling Cap extraction adder64 ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 91% of 9646 wires extracted
+[INFO RCX-0442] 100% of 9646 wires extracted
+[INFO RCX-0045] Extract 517 nets, 1455 rsegs, 1455 caps, 1566 ccs
+[INFO RCX-0443] 517 nets finished
+[INFO PSM-0040] All shapes on net VDD are connected.
+########## IR report #################
+Net              : VDD
+Corner           : default
+Total power      : 6.90e-05 W
+Supply voltage   : 1.80e+00 V
+Worstcase voltage: 1.80e+00 V
+Average voltage  : 1.80e+00 V
+Average IR drop  : 8.76e-08 V
+Worstcase IR drop: 5.91e-06 V
+Percentage drop  : 0.00 %
+######################################
+[INFO PSM-0040] All shapes on net VSS are connected.
+########## IR report #################
+Net              : VSS
+Corner           : default
+Total power      : 6.90e-05 W
+Supply voltage   : 0.00e+00 V
+Worstcase voltage: 2.78e-06 V
+Average voltage  : 4.82e-08 V
+Average IR drop  : 4.82e-08 V
+Worstcase IR drop: 2.78e-06 V
+Percentage drop  : 0.00 %
+######################################
+Cell type report:                       Count       Area
+  Fill cell                             34792  282988.91
+  Tap cell                               3900    4879.68
+  Timing Repair Buffer                    196    1956.88
+  Multi-Input combinational cell          192    1761.69
+  Total                                 39080  291587.16
+Report metrics stage 6, finish...
+No registers in design
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 3719 um^2 1% utilization.
+Elapsed time: 0:03.50[h:]min:sec. CPU time: user 3.01 sys 0.25 (93%). Peak memory: 391872KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+6_report                           3            382                  N/A

@@ -1,0 +1,22 @@
+
+20. Printing statistics.
+
+=== adder64 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      132        - wires
+      321        - wire bits
+      132        - public wires
+      321        - public wire bits
+        5        - ports
+      194        - port bits
+      192  1761.69 cells
+       64  640.614   sky130_fd_sc_hd__maj3_1
+       64  560.538   sky130_fd_sc_hd__xnor2_1
+       64  560.538   sky130_fd_sc_hd__xor2_1
+
+   Chip area for module '\adder64': 1761.689600
+     of which used for sequential elements: 0.000000 (0.00%)
+
