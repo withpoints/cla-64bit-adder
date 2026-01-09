@@ -149,5 +149,5 @@ This project demonstrates a full **RTL–GDSII ASIC flow** using only **open-sou
 ## ✨ Author
 
 **Rohit Kumar Maurya**
-M.Tech (VLSI Design) – RTL-to-GDS enthusiast
+M.Tech (ESD -VLSI System Design) – RTL-to-GDS enthusiast
 
